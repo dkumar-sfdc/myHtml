@@ -3,14 +3,24 @@
 <body>
 
 
-<button onclick="myFunction()">Click me</button>
+<button onclick="myFunctionSelf()">Click Self</button>
+  <button onclick="myFunctionBlank()">Click Blank</button>
+  <button onclick="myFunctionpopUp()">Click Popup</button>
 
 <p id="demo"></p>
 
 <script>
-function myFunction() {
+function myFunctionSelf() {
   document.getElementById("demo").innerHTML = "Hello World";
-  window.open("slack://channel?team=T01GST6QY0G&id=C01KJQZA0H4");
+  window.open("slack://channel?team=T01GST6QY0G&id=C01KJQZA0H4", '_self');
+}
+  function myFunctionBlank() {
+  document.getElementById("demo").innerHTML = "Hello World";
+  window.open("slack://channel?team=T01GST6QY0G&id=C01KJQZA0H4", '_blank');
+}
+  function myFunctionpopUp() {
+  document.getElementById("demo").innerHTML = "Hello World";
+  window.open("slack://channel?team=T01GST6QY0G&id=C01KJQZA0H4",'popup','width=600,height=600');
 }
 </script>
 
